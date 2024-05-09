@@ -1,0 +1,28 @@
+package Avaliações;
+import java.util.Scanner;
+
+public class questão2 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        
+        //primeiramento colocamos os atributos necessários
+        int n1, fatorial, i;
+        fatorial =1;
+
+        // solicitamos o número para o usuário
+        System.out.println("insira um número inteiro não negativo");
+        n1 = ler.nextInt();
+
+        // verificamos se o número é inteiro
+        if (n1<0) {
+            System.out.println("número inválido");
+        }
+
+        // o programa irá calcular o fatorial do número digitado
+        for (i=1; i<=n1; i++) {
+            fatorial *= i;
+        }
+        //o programa irá exibir o resultado final 
+        System.out.println("o Fatorial de " + n1 + " é igual a: " + fatorial);
+    }
+}
