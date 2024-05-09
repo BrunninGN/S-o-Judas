@@ -1,0 +1,30 @@
+package Avaliações;
+import java.util.Scanner;
+
+public class questão1 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        String Nome;
+        Float valorCompra, valorPagamento; 
+
+        System.out.println("Seja bem vindo a padaria do Senhor Paiva, qual é o seu nome?");
+        Nome = ler.next();
+
+        System.out.println("Qual o valor da sua compra?");
+        valorCompra = ler.nextFloat();
+
+        System.out.println("Qual valor usará para pagamento?");
+        valorPagamento = ler.nextFloat();
+
+        Float troco = valorPagamento - valorCompra;
+
+        if (valorPagamento>valorCompra) {
+            System.out.println("Olá " + Nome + ", sua compra deu " + valorCompra + " reais e você pagou com " + valorPagamento + " reais então você receberá " + troco + " reais de troco");
+        }
+        
+        if (valorPagamento<valorCompra) {
+            System.out.println("Olá " + Nome + " sua compra deu " + valorCompra + " reais, porém você pagou com " + valorPagamento + " reais, o valor é insuficiente para realizar a compra");
+        }
+
+    }
+}
